@@ -1,0 +1,16 @@
+version: "3"
+services:
+  nexus:
+   image: sonatype/nexus3
+   volumes:
+    - "nexus-data:/nexus-data"
+   ports:
+    - "8085:8081"
+    - "8086:8082"
+#   deploy
+#    resources:
+#     limits:
+#       cpus: 0.50
+#       memory: 2048M
+volumes:
+ nexus-data: {}
